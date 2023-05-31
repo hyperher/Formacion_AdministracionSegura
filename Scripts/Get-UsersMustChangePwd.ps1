@@ -1,0 +1,1 @@
+﻿Get-ADUser -SearchBase "OU=Test,DC=Domain,DC=local" -filter * -Properties name, samaccountname, pwdLastSet | Where-Object {$_.pwdLastSet -eq 0} | select name, samaccountname | Sort-Object -Property name | Export-Csv C:\Temp\UsersMustChange.csv -Delimiter ";"
