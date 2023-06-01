@@ -1,6 +1,6 @@
-Install-windowsfeature -name "Ad-domain-services" -includeallsubeature -includemanagementtools
+Install-windowsfeature -name "Ad-domain-services" -includeallsubfeature -includemanagementtools
 
-Install-windowsfeature -name "dns" -includeallsubeature -includemanagementtools
+Install-windowsfeature -name "dns" -includeallsubfeature -includemanagementtools
 
 Import-Module ADDSDeployment
 Install-ADDSForest `

@@ -11,6 +11,8 @@ $newname = “DcPing”
 Rename-Computer -NewName $newname –force
 
 
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+Install-windowsfeature -name "Ad-domain-services" -includeallsubfeature -includemanagementtools
+
+Install-windowsfeature -name "dns" -includeallsubfeature -includemanagementtools
 
 Install-ADDSForest -DomainName "dominio.local" -DomainNetBiosName "domain" -InstallDns:$true 
